@@ -1,42 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Kodiak Solutions Design System - Professional Gold Mining Consultancy */
 
 @layer base {
   :root {
+    /* Corporate Gold Mining Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 5%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Gold - Kodiak's signature color */
+    --primary: 45 89% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 45 89% 40%;
+    --primary-light: 45 89% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Corporate Black */
+    --secondary: 0 0% 5%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Professional Grays */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 89% 95%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 89%;
+    --input: 0 0% 96%;
+    --ring: 45 89% 53%;
 
     --radius: 0.5rem;
+
+    /* Custom Design Tokens */
+    --gradient-gold: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--secondary)), hsl(0 0% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--secondary) / 0.9), hsl(var(--primary) / 0.1));
+    
+    --shadow-gold: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-elegant: 0 20px 40px -20px hsl(var(--secondary) / 0.2);
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +117,90 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Open Sans', sans-serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  /* Corporate Button Variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 border-2 border-transparent hover:border-primary;
+  }
+
+  .btn-outline-gold {
+    @apply border-2 border-primary text-primary bg-transparent font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:shadow-lg;
+  }
+
+  .btn-dark {
+    @apply bg-secondary text-secondary-foreground font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:bg-secondary/90 hover:shadow-lg;
+  }
+
+  /* Floating Elements Animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delay-1 {
+    animation-delay: -2s;
+  }
+
+  .float-delay-2 {
+    animation-delay: -4s;
+  }
+
+  /* Corporate Card Styles */
+  .card-corporate {
+    @apply bg-card rounded-xl border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2;
+  }
+
+  .card-gold {
+    @apply bg-gradient-to-br from-accent to-background border-2 border-primary/20 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2;
+  }
+
+  /* Professional Text Styles */
+  .text-corporate {
+    @apply text-secondary font-medium;
+  }
+
+  .text-gold {
+    @apply text-primary font-semibold;
+  }
+
+  /* Hero Section Background */
+  .hero-overlay {
+    background: var(--gradient-hero);
+    backdrop-filter: blur(2px);
+  }
+
+  /* Professional Shadows */
+  .shadow-corporate {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
