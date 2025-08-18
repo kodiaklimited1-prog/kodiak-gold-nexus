@@ -20,26 +20,26 @@ const Header = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
+        <div className="container mx-auto px-2">
+          <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/bd41d491-0ef4-4bf7-91f9-7e5ff7eab679.png" 
                 alt="Kodiak Solutions Limited" 
-                className="h-16 md:h-20 w-auto"
+                className="h-20 md:h-24 w-auto"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-center space-x-12 flex-1">
+            <nav className="hidden lg:flex items-center justify-center space-x-16 flex-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-lg font-semibold transition-colors duration-200 px-4 py-2 ${
+                  className={`text-xl font-bold transition-colors duration-200 px-6 py-3 ${
                     isActive(item.href)
-                      ? "text-primary border-b-2 border-primary pb-2"
+                      ? "text-primary border-b-3 border-primary pb-3"
                       : "text-foreground hover:text-primary"
                   }`}
                 >

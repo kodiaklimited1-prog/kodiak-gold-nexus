@@ -38,7 +38,14 @@ const About = () => {
       />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary to-secondary/90 text-secondary-foreground">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 to-secondary/90"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url(${consultancyTeam})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}></div>
+        <div className="relative z-10 text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 font-serif">
@@ -50,6 +57,7 @@ const About = () => {
               and technical solutions.
             </p>
           </div>
+        </div>
         </div>
       </section>
 

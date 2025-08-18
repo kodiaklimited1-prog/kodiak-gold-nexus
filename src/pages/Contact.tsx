@@ -52,7 +52,14 @@ const Contact = () => {
       />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-secondary to-secondary/90 text-secondary-foreground">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 to-secondary/90"></div>
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: `url('/assets/mining-equipment.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}></div>
+        <div className="relative z-10 text-secondary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6 font-serif">
             Get in <span className="text-primary">Touch</span>
@@ -61,6 +68,7 @@ const Contact = () => {
             Ready to elevate your mining operations? Contact our experts today for personalized 
             consultation and discover how we can help optimize your gold mining processes.
           </p>
+        </div>
         </div>
       </section>
 
@@ -163,25 +171,25 @@ const Contact = () => {
                   {
                     icon: Phone,
                     title: "Phone Number",
-                    content: "+1 (555) 123-4567",
-                    link: "tel:+15551234567"
+                    content: "+254 710 337 605",
+                    link: "tel:+254710337605"
                   },
                   {
                     icon: MessageSquare,
                     title: "WhatsApp",
-                    content: "+1 (555) 123-4567",
-                    link: "https://wa.me/1234567890"
+                    content: "+254 710 337 605",
+                    link: "https://wa.me/0710337605"
                   },
                   {
                     icon: Mail,
                     title: "Email Address",
-                    content: "info@kodiaksolutions.com",
-                    link: "mailto:info@kodiaksolutions.com"
+                    content: "info@kodiaksolutions.co.ke",
+                    link: "mailto:info@kodiaksolutions.co.ke"
                   },
                   {
                     icon: MapPin,
                     title: "Office Address",
-                    content: "123 Mining District, Gold Valley, GV 12345",
+                    content: "Nairobi, Kenya",
                     link: "https://maps.google.com"
                   }
                 ].map((contact, index) => (
@@ -282,7 +290,7 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-hero" asChild>
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/0710337605" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -294,7 +302,7 @@ const Contact = () => {
               className="btn-outline-gold bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary"
               asChild
             >
-              <a href="tel:+15551234567">
+              <a href="tel:+254710337605">
                 Call Us Direct
               </a>
             </Button>
