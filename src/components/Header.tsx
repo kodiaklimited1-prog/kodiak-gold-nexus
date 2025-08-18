@@ -27,19 +27,19 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/bd41d491-0ef4-4bf7-91f9-7e5ff7eab679.png" 
                 alt="Kodiak Solutions Limited" 
-                className="h-12 w-auto"
+                className="h-16 md:h-20 w-auto"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center justify-center space-x-12 flex-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors duration-200 ${
+                  className={`text-lg font-semibold transition-colors duration-200 px-4 py-2 ${
                     isActive(item.href)
-                      ? "text-primary border-b-2 border-primary pb-1"
+                      ? "text-primary border-b-2 border-primary pb-2"
                       : "text-foreground hover:text-primary"
                   }`}
                 >
@@ -56,7 +56,7 @@ const Header = () => {
                 asChild
               >
                 <a 
-                  href="https://wa.me/1234567890" 
+                  href="https://wa.me/0710337605" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2"
@@ -111,7 +111,7 @@ const Header = () => {
                     asChild
                   >
                     <a 
-                      href="https://wa.me/1234567890" 
+                      href="https://wa.me/0710337605" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center justify-center space-x-2"
@@ -132,7 +132,7 @@ const Header = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/0710337605"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"

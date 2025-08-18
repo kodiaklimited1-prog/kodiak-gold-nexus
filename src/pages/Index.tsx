@@ -82,13 +82,9 @@ const Index = () => {
               className="btn-outline-gold text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary"
               asChild
             >
-              <a 
-                href="https://wa.me/1234567890" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                WhatsApp Us
-              </a>
+              <Link to="/contact">
+                Get Quote
+              </Link>
             </Button>
           </div>
         </div>
@@ -202,7 +198,7 @@ const Index = () => {
               asChild
             >
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/0710337605" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
