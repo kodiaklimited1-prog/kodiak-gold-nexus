@@ -70,7 +70,7 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif animate-slide-up">
             Your Trusted Partner in{" "}
-            <span className="text-primary animate-pulse-glow">Gold Mining Excellence</span>
+            <span className="gold-text animate-gold-glow">Gold Mining Excellence</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-slide-up" style={{animationDelay: '0.3s'}}>
             Delivering world-class consultancy, elution, chemicals, and equipment solutions 
@@ -78,7 +78,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{animationDelay: '0.6s'}}>
-            <Button className="btn-hero text-lg px-8 py-4 hover-scale" asChild>
+            <Button className="btn-hero text-lg px-8 py-4 hover-scale gold-hover-effect" asChild>
               <Link to="/services" className="flex items-center space-x-2">
                 <span>Explore Services</span>
                 <ArrowRight className="h-5 w-5" />
@@ -116,13 +116,18 @@ const Index = () => {
             {stats.map((stat, index) => (
               <Card 
                 key={index} 
-                className="card-gold text-center border-none hover-scale animate-slide-up" 
+                className="card-gold text-center border-none hover-scale animate-slide-up gold-hover-effect" 
                 style={{animationDelay: `${index * 0.2}s`}}
               >
-                <CardContent className="p-6">
-                  <stat.icon className="h-12 w-12 text-primary mx-auto mb-4 animate-pulse-glow" />
-                  <div className="text-3xl font-bold text-secondary mb-2">{stat.value}</div>
+                <CardContent className="p-6 relative">
+                  <stat.icon className="h-12 w-12 text-primary mx-auto mb-4 animate-gold-pulse" />
+                  <div className="text-3xl font-bold text-secondary mb-2 gold-text">{stat.value}</div>
                   <div className="text-muted-foreground font-medium">{stat.label}</div>
+                  
+                  {/* Gold particles */}
+                  <div className="gold-particle" style={{top: '10px', left: '20px'}}></div>
+                  <div className="gold-particle" style={{top: '30px', right: '15px'}}></div>
+                  <div className="gold-particle" style={{bottom: '20px', left: '30px'}}></div>
                 </CardContent>
               </Card>
             ))}
@@ -139,7 +144,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl font-bold text-secondary mb-4 font-serif">
+            <h2 className="text-4xl font-bold text-secondary mb-4 font-serif gold-text animate-gold-glow">
               Our Core Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -178,7 +183,7 @@ const Index = () => {
                 bgImage: miningAction
               }
             ].map((service, index) => (
-              <Link key={index} to={service.href} className="block animate-slide-up" style={{animationDelay: `${index * 0.2}s`}}>
+              <Link key={index} to={service.href} className="block animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.2}s`}}>
                 <Card className="card-corporate group cursor-pointer relative overflow-hidden h-80">
                   <div 
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -187,12 +192,12 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-transparent"></div>
                   <CardContent className="p-6 text-center relative z-10 h-full flex flex-col justify-between">
                     <div>
-                      <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors duration-300">
-                        <service.icon className="w-8 h-8 text-primary" />
-                      </div>
+                    <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors duration-300 animate-gold-pulse">
+                      <service.icon className="w-8 h-8 text-primary animate-gold-sparkle" />
+                    </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-3 font-serif">
+                      <h3 className="text-xl font-semibold text-white mb-3 font-serif gold-text">
                         {service.title}
                       </h3>
                       <p className="text-white/80 mb-4 text-sm">
@@ -210,7 +215,7 @@ const Index = () => {
           </div>
 
           <div className="text-center mt-12 animate-slide-up" style={{animationDelay: '0.8s'}}>
-            <Button className="btn-hero hover-scale" asChild>
+            <Button className="btn-hero hover-scale gold-hover-effect" asChild>
               <Link to="/services">View All Services</Link>
             </Button>
           </div>
@@ -225,14 +230,14 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6 font-serif text-secondary-foreground animate-slide-up">
+          <h2 className="text-4xl font-bold mb-6 font-serif text-secondary-foreground animate-slide-up gold-text animate-gold-glow">
             Ready to Elevate Your Mining Operations?
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto text-secondary-foreground animate-slide-up" style={{animationDelay: '0.3s'}}>
             Partner with Kodiak Solutions Limited and experience the difference that professional expertise makes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.6s'}}>
-            <Button className="btn-hero hover-scale" asChild>
+            <Button className="btn-hero hover-scale gold-hover-effect" asChild>
               <Link to="/contact">Get Started Today</Link>
             </Button>
             <Button 

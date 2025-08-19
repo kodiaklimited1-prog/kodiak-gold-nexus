@@ -128,9 +128,26 @@
 }
 
 @layer components {
-  /* Corporate Button Variants */
+  /* Corporate Button Variants with Gold Animations */
   .btn-hero {
     @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 border-2 border-transparent hover:border-primary;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .btn-hero:hover::before {
+    left: 100%;
   }
 
   .btn-outline-gold {
@@ -200,6 +217,55 @@
   }
 }
 
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.8), 0 0 60px hsl(var(--primary) / 0.4);
+  }
+}
+
+@keyframes goldGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.8), 0 0 30px hsl(var(--primary) / 0.6);
+  }
+}
+
+@keyframes goldSparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes goldRipple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
 @keyframes slideInUp {
   from {
     transform: translateY(30px);
@@ -251,41 +317,92 @@
   }
 }
 
-/* Dynamic Animation Classes */
-.animate-slide-up {
-  animation: slideInUp 0.8s ease-out forwards;
+/* Gold Animation Classes */
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
+  background-size: 200% 100%;
+  animation: goldShimmer 2s infinite;
 }
 
-.animate-slide-left {
-  animation: slideInLeft 0.8s ease-out forwards;
+.animate-gold-pulse {
+  animation: goldPulse 3s ease-in-out infinite;
 }
 
-.animate-slide-right {
-  animation: slideInRight 0.8s ease-out forwards;
+.animate-gold-glow {
+  animation: goldGlow 2s ease-in-out infinite;
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
+.animate-gold-sparkle {
+  animation: goldSparkle 2s ease-in-out infinite;
 }
 
-.animate-rotate-slow {
-  animation: rotate-slow 20s linear infinite;
+.animate-gold-ripple {
+  animation: goldRipple 0.6s ease-out;
 }
 
-.hover-scale {
+/* Gold Hover Effects */
+.gold-hover-effect {
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.hover-scale:hover {
-  transform: scale(1.05);
+.gold-hover-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.2), transparent);
+  transition: left 0.5s;
 }
 
-.parallax-bg {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.gold-hover-effect:hover::before {
+  left: 100%;
 }
+
+.gold-button {
+  position: relative;
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+  background-size: 200% 200%;
+  animation: goldShimmer 3s ease infinite;
+  box-shadow: 0 4px 15px hsl(var(--primary) / 0.4);
+  transition: all 0.3s ease;
+}
+
+.gold-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px hsl(var(--primary) / 0.6);
+}
+
+.gold-text {
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary-light)), hsl(var(--primary)));
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: goldShimmer 3s linear infinite;
+}
+
+.gold-border {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, hsl(var(--primary)), hsl(var(--primary-dark))) border-box;
+}
+
+.gold-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: hsl(var(--primary));
+  border-radius: 50%;
+  animation: goldSparkle 2s ease-in-out infinite;
+}
+
+.gold-particle:nth-child(2) { animation-delay: 0.5s; }
+.gold-particle:nth-child(3) { animation-delay: 1s; }
+.gold-particle:nth-child(4) { animation-delay: 1.5s; }
 
 /* Smooth scrolling */
 html {
