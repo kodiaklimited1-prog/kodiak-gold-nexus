@@ -61,10 +61,10 @@ const Contact = () => {
         }}></div>
         <div className="relative z-10 text-secondary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 font-serif">
-            Get in <span className="text-primary">Touch</span>
+          <h1 className="text-5xl font-bold mb-6 font-serif animate-slide-up">
+            Get in <span className="gold-text animate-gold-glow">Touch</span>
           </h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{animationDelay: '0.3s'}}>
             Ready to elevate your mining operations? Contact our experts today for personalized 
             consultation and discover how we can help optimize your gold mining processes.
           </p>
@@ -77,10 +77,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="card-corporate">
-              <CardContent className="p-8">
+            <Card className="card-corporate animate-slide-left gold-hover-effect">
+              <CardContent className="p-8 relative">
                 <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-secondary mb-4 font-serif">
+                  <h2 className="text-3xl font-bold text-secondary mb-4 font-serif gold-text">
                     Send Us a Message
                   </h2>
                   <p className="text-muted-foreground">
@@ -146,18 +146,22 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="btn-hero w-full">
+                  <Button type="submit" className="btn-hero w-full gold-hover-effect">
                     <Send className="h-4 w-4 mr-2" />
                     Send Message
                   </Button>
+                  
+                  {/* Gold particles */}
+                  <div className="gold-particle" style={{top: '20px', right: '30px'}}></div>
+                  <div className="gold-particle" style={{bottom: '20px', left: '30px'}}></div>
                 </form>
               </CardContent>
             </Card>
 
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-right">
               <div>
-                <h2 className="text-3xl font-bold text-secondary mb-6 font-serif">
+                <h2 className="text-3xl font-bold text-secondary mb-6 font-serif gold-text">
                   Contact Information
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
@@ -193,10 +197,10 @@ const Contact = () => {
                     link: "https://maps.google.com"
                   }
                 ].map((contact, index) => (
-                  <Card key={index} className="card-gold">
-                    <CardContent className="p-6">
+                  <Card key={index} className="card-gold hover-scale animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.1}s`}}>
+                    <CardContent className="p-6 relative">
                       <div className="flex items-start space-x-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
+                        <div className="bg-primary/10 p-3 rounded-lg animate-gold-pulse">
                           <contact.icon className="h-6 w-6 text-primary" />
                         </div>
                         <div>
@@ -213,6 +217,7 @@ const Contact = () => {
                           </a>
                         </div>
                       </div>
+                      <div className="gold-particle" style={{top: '10px', right: '15px'}}></div>
                     </CardContent>
                   </Card>
                 ))}

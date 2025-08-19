@@ -91,10 +91,10 @@ const Projects = () => {
         }}></div>
         <div className="relative z-10 text-secondary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 font-serif">
-            Our <span className="text-primary">Project Portfolio</span>
+          <h1 className="text-5xl font-bold mb-6 font-serif animate-slide-up">
+            Our <span className="gold-text animate-gold-glow">Project Portfolio</span>
           </h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{animationDelay: '0.3s'}}>
             Discover how we've helped mining operations worldwide achieve exceptional results through 
             innovative solutions, expert consultancy, and cutting-edge technology implementation.
           </p>
@@ -116,16 +116,18 @@ const Projects = () => {
 
           <div className="space-y-20">
             {projects.map((project, index) => (
-              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.3}s`}}>
                 {/* Image */}
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="relative">
+                  <div className="relative hover-scale">
                     <img 
                       src={project.image} 
                       alt={project.title}
                       className="rounded-xl shadow-lg w-full h-96 object-cover"
                     />
                     <div className="absolute inset-0 bg-primary/10 rounded-xl"></div>
+                    <div className="gold-particle" style={{top: '20px', left: '30px'}}></div>
+                    <div className="gold-particle" style={{bottom: '30px', right: '20px'}}></div>
                   </div>
                 </div>
 

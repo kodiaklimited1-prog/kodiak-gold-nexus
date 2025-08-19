@@ -82,10 +82,10 @@ const Services = () => {
         }}></div>
         <div className="relative z-10 text-secondary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 font-serif">
-            Our <span className="text-primary">Mining Services</span>
+          <h1 className="text-5xl font-bold mb-6 font-serif animate-slide-up">
+            Our <span className="gold-text animate-gold-glow">Mining Services</span>
           </h1>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{animationDelay: '0.3s'}}>
             Comprehensive gold mining solutions designed to maximize recovery efficiency, 
             ensure operational safety, and drive sustainable growth for your mining operations.
           </p>
@@ -98,16 +98,16 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="space-y-20">
             {services.map((service, index) => (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-slide-up gold-hover-effect ${
                 index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}>
+              }`} style={{animationDelay: `${index * 0.3}s`}}>
                 {/* Content */}
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className="bg-primary/10 p-3 rounded-lg">
-                      <service.icon className="h-8 w-8 text-primary" />
+                    <div className="bg-primary/10 p-3 rounded-lg animate-gold-pulse">
+                      <service.icon className="h-8 w-8 text-primary animate-gold-sparkle" />
                     </div>
-                    <h2 className="text-3xl font-bold text-secondary font-serif">
+                    <h2 className="text-3xl font-bold text-secondary font-serif gold-text">
                       {service.title}
                     </h2>
                   </div>
@@ -128,7 +128,7 @@ const Services = () => {
                     </ul>
                   </div>
 
-                  <Button className="btn-hero" asChild>
+                  <Button className="btn-hero gold-hover-effect" asChild>
                     <Link to={service.href} className="flex items-center space-x-2">
                       <span>Learn More</span>
                       <ArrowRight className="h-5 w-5" />

@@ -48,10 +48,10 @@ const About = () => {
         <div className="relative z-10 text-secondary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 font-serif">
-              About <span className="text-primary">Kodiak Solutions</span>
+            <h1 className="text-5xl font-bold mb-6 font-serif animate-slide-up">
+              About <span className="gold-text animate-gold-glow">Kodiak Solutions</span>
             </h1>
-            <p className="text-xl opacity-90 leading-relaxed">
+            <p className="text-xl opacity-90 leading-relaxed animate-slide-up" style={{animationDelay: '0.3s'}}>
               With over 15 years of experience in the gold mining industry, we have established ourselves 
               as a trusted partner for mining operations worldwide, delivering exceptional consultancy 
               and technical solutions.
@@ -87,13 +87,16 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative animate-slide-right">
               <img 
                 src={consultancyTeam} 
                 alt="Kodiak Solutions Team" 
-                className="rounded-xl shadow-lg"
+                className="rounded-xl shadow-lg hover-scale gold-hover-effect"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-xl"></div>
+              {/* Gold particles */}
+              <div className="gold-particle" style={{top: '20px', left: '30px'}}></div>
+              <div className="gold-particle" style={{bottom: '30px', right: '20px'}}></div>
             </div>
           </div>
         </div>
@@ -104,15 +107,16 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Mission */}
-            <Card className="card-gold">
-              <CardContent className="p-8 text-center">
-                <Target className="h-16 w-16 text-primary mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-secondary mb-4 font-serif">Our Mission</h3>
+            <Card className="card-gold hover-scale animate-slide-up gold-hover-effect">
+              <CardContent className="p-8 text-center relative">
+                <Target className="h-16 w-16 text-primary mx-auto mb-6 animate-gold-pulse" />
+                <h3 className="text-2xl font-bold text-secondary mb-4 font-serif gold-text">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To provide world-class gold mining consultancy and solutions that maximize 
                   recovery efficiency, ensure operational safety, and drive sustainable growth 
                   for our clients worldwide.
                 </p>
+                <div className="gold-particle" style={{top: '15px', right: '20px'}}></div>
               </CardContent>
             </Card>
 
