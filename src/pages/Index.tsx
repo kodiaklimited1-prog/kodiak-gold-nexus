@@ -68,9 +68,9 @@ const Index = () => {
 
         {/* Enhanced Content with Animations */}
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif animate-slide-up mining-interactive">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif animate-slide-up">
             Your Trusted Partner in{" "}
-            <span className="gold-text animate-gold-glow gold-discovery">Gold Mining Excellence</span>
+            <span className="gold-text animate-gold-glow">Gold Mining Excellence</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-slide-up" style={{animationDelay: '0.3s'}}>
             Delivering world-class consultancy, elution, chemicals, and equipment solutions 
@@ -105,29 +105,29 @@ const Index = () => {
       </section>
 
       {/* Enhanced Stats Section with Background */}
-      <section className="py-20 relative overflow-hidden mining-section-enter">
+      <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax-bg opacity-10"
           style={{ backgroundImage: `url(${miningAction})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95 animate-gold-vein"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <Card 
                 key={index} 
-                className="card-gold text-center border-none hover-scale animate-slide-up gold-hover-effect mining-interactive animate-gold-extraction" 
+                className="card-gold text-center border-none hover-scale animate-slide-up gold-hover-effect" 
                 style={{animationDelay: `${index * 0.2}s`}}
               >
                 <CardContent className="p-6 relative">
-                  <stat.icon className="h-12 w-12 text-primary mx-auto mb-4 animate-mining-drill" />
-                  <div className="text-3xl font-bold text-secondary mb-2 gold-text animate-gold-refining">{stat.value}</div>
+                  <stat.icon className="h-12 w-12 text-primary mx-auto mb-4 animate-gold-pulse" />
+                  <div className="text-3xl font-bold text-secondary mb-2 gold-text">{stat.value}</div>
                   <div className="text-muted-foreground font-medium">{stat.label}</div>
                   
-                  {/* Enhanced Gold particles */}
-                  <div className="gold-particle animate-ore-processing" style={{top: '10px', left: '20px'}}></div>
-                  <div className="gold-particle animate-equipment-operation" style={{top: '30px', right: '15px'}}></div>
-                  <div className="gold-particle animate-chemical-reaction" style={{bottom: '20px', left: '30px'}}></div>
+                  {/* Gold particles */}
+                  <div className="gold-particle" style={{top: '10px', left: '20px'}}></div>
+                  <div className="gold-particle" style={{top: '30px', right: '15px'}}></div>
+                  <div className="gold-particle" style={{bottom: '20px', left: '30px'}}></div>
                 </CardContent>
               </Card>
             ))}
@@ -136,18 +136,18 @@ const Index = () => {
       </section>
 
       {/* Enhanced Services Preview with Images */}
-      <section className="py-20 relative overflow-hidden processing-section-enter">
+      <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax-bg opacity-5"
           style={{ backgroundImage: `url(${processingPlant})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background animate-gold-vein"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-slide-up consultancy-section-enter">
-            <h2 className="text-4xl font-bold text-secondary mb-4 font-serif gold-text animate-gold-glow mining-interactive">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl font-bold text-secondary mb-4 font-serif gold-text animate-gold-glow">
               Our Core Services
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-consultancy-flow">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Comprehensive mining solutions tailored to your specific needs and requirements.
             </p>
           </div>
@@ -183,17 +183,17 @@ const Index = () => {
                 bgImage: miningAction
               }
             ].map((service, index) => (
-              <Link key={index} to={service.href} className="block animate-slide-up gold-hover-effect mining-interactive equipment-section-enter" style={{animationDelay: `${index * 0.2}s`}}>
-                <Card className="card-corporate group cursor-pointer relative overflow-hidden h-80 gold-discovery animate-equipment-operation">
-                  <div
+              <Link key={index} to={service.href} className="block animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.2}s`}}>
+                <Card className="card-corporate group cursor-pointer relative overflow-hidden h-80">
+                  <div 
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                     style={{ backgroundImage: `url(${service.bgImage})` }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/70 to-transparent"></div>
                   <CardContent className="p-6 text-center relative z-10 h-full flex flex-col justify-between">
                     <div>
-                    <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors duration-300 animate-gold-pulse mining-interactive">
-                      <service.icon className="w-8 h-8 text-primary animate-ore-processing" />
+                    <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors duration-300 animate-gold-pulse">
+                      <service.icon className="w-8 h-8 text-primary animate-gold-sparkle" />
                     </div>
                     </div>
                     <div>
@@ -223,26 +223,26 @@ const Index = () => {
       </section>
 
       {/* Enhanced CTA Section with Background */}
-      <section className="py-20 relative overflow-hidden consultancy-section-enter">
+      <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax-bg"
           style={{ backgroundImage: `url(${teamConsulting})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95 animate-gold-vein"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6 font-serif text-secondary-foreground animate-slide-up gold-text animate-gold-glow mining-interactive">
+          <h2 className="text-4xl font-bold mb-6 font-serif text-secondary-foreground animate-slide-up gold-text animate-gold-glow">
             Ready to Elevate Your Mining Operations?
           </h2>
-          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto text-secondary-foreground animate-slide-up animate-consultancy-flow" style={{animationDelay: '0.3s'}}>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto text-secondary-foreground animate-slide-up" style={{animationDelay: '0.3s'}}>
             Partner with Kodiak Solutions Limited and experience the difference that professional expertise makes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up equipment-section-enter" style={{animationDelay: '0.6s'}}>
-            <Button className="btn-hero hover-scale gold-hover-effect mining-interactive animate-mining-drill" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{animationDelay: '0.6s'}}>
+            <Button className="btn-hero hover-scale gold-hover-effect" asChild>
               <Link to="/contact">Get Started Today</Link>
             </Button>
             <Button 
               variant="outline" 
-              className="btn-outline-gold bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary hover-scale mining-interactive animate-chemical-reaction"
+              className="btn-outline-gold bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary hover-scale"
               asChild
             >
               <a 
