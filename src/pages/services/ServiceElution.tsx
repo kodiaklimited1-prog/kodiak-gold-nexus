@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import elutionProcess from "@/assets/elution-process.jpg";
+import africanElutionProcess from "@/assets/african-elution-process.jpg";
 
 const ServiceElution = () => {
   const benefits = [
@@ -36,7 +36,7 @@ const ServiceElution = () => {
       <section className="relative py-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${elutionProcess})` }}
+          style={{ backgroundImage: `url(${africanElutionProcess})` }}
         />
         <div className="absolute inset-0 bg-secondary/80" />
         

@@ -4,13 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import heroMining from "@/assets/hero-mining.jpg";
+import africanMiningHero from "@/assets/african-mining-hero.jpg";
 import floatingElement1 from "@/assets/floating-element-1.png";
 import floatingElement2 from "@/assets/floating-element-2.png";
-import miningAction from "@/assets/mining-action-1.jpg";
-import labProcessing from "@/assets/lab-processing.jpg";
-import teamConsulting from "@/assets/team-consulting.jpg";
-import processingPlant from "@/assets/processing-plant.jpg";
+import africanMiningEquipment from "@/assets/african-mining-equipment.jpg";
+import africanLabProcessing from "@/assets/african-lab-processing.jpg";
+import africanTeamConsulting from "@/assets/african-team-consulting.jpg";
+import africanProcessingPlant from "@/assets/african-processing-plant.jpg";
 
 const Index = () => {
   const stats = [
@@ -33,7 +33,7 @@ const Index = () => {
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroMining})` }}
+          style={{ backgroundImage: `url(${africanMiningHero})` }}
         />
         
         {/* Overlay */}
@@ -108,7 +108,7 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax-bg opacity-10"
-          style={{ backgroundImage: `url(${miningAction})` }}
+          style={{ backgroundImage: `url(${africanMiningEquipment})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -139,7 +139,7 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax-bg opacity-5"
-          style={{ backgroundImage: `url(${processingPlant})` }}
+          style={{ backgroundImage: `url(${africanProcessingPlant})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -159,28 +159,28 @@ const Index = () => {
                 description: "Expert guidance and strategic planning for your mining operations.",
                 href: "/services/consultancy",
                 icon: Target,
-                bgImage: teamConsulting
+                bgImage: africanTeamConsulting
               },
               {
                 title: "Gold Elution",
                 description: "Advanced elution processes for maximum gold recovery efficiency.",
                 href: "/services/elution",
                 icon: Zap,
-                bgImage: labProcessing
+                bgImage: africanLabProcessing
               },
               {
                 title: "Mining Chemicals",
                 description: "High-quality chemicals optimized for gold mining operations.",
                 href: "/services/chemicals",
                 icon: Shield,
-                bgImage: labProcessing
+                bgImage: africanLabProcessing
               },
               {
                 title: "Mining Equipment",
                 description: "State-of-the-art equipment for professional mining operations.",
                 href: "/services/equipment",
                 icon: Star,
-                bgImage: miningAction
+                bgImage: africanMiningEquipment
               }
             ].map((service, index) => (
               <Link key={index} to={service.href} className="block animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.2}s`}}>
@@ -226,7 +226,7 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 parallax-bg"
-          style={{ backgroundImage: `url(${teamConsulting})` }}
+          style={{ backgroundImage: `url(${africanTeamConsulting})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95"></div>
         <div className="container mx-auto px-4 text-center relative z-10">

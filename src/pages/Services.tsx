@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import consultancyTeam from "@/assets/consultancy-team.jpg";
-import elutionProcess from "@/assets/elution-process.jpg";
-import miningEquipment from "@/assets/mining-equipment.jpg";
+import africanTeamConsulting from "@/assets/african-team-consulting.jpg";
+import africanElutionProcess from "@/assets/african-elution-process.jpg";
+import africanMiningEquipment from "@/assets/african-mining-equipment.jpg";
 
 const Services = () => {
   const services = [
@@ -20,7 +20,7 @@ const Services = () => {
         "Risk Assessment & Management",
         "Regulatory Compliance Support"
       ],
-      image: consultancyTeam,
+      image: africanTeamConsulting,
       href: "/services/consultancy"
     },
     {
@@ -33,7 +33,7 @@ const Services = () => {
         "Recovery Rate Enhancement",
         "Quality Control Systems"
       ],
-      image: elutionProcess,
+      image: africanElutionProcess,
       href: "/services/elution"
     },
     {
@@ -46,7 +46,7 @@ const Services = () => {
         "Custom Chemical Solutions",
         "Safe Handling Protocols"
       ],
-      image: miningEquipment,
+      image: africanMiningEquipment,
       href: "/services/chemicals"
     },
     {
@@ -59,7 +59,7 @@ const Services = () => {
         "Maintenance & Support",
         "Technology Upgrades"
       ],
-      image: miningEquipment,
+      image: africanMiningEquipment,
       href: "/services/equipment"
     }
   ];
@@ -76,7 +76,7 @@ const Services = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 to-secondary/90"></div>
         <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url(${miningEquipment})`,
+          backgroundImage: `url(${africanMiningEquipment})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}></div>

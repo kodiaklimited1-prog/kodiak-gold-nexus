@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import miningEquipment from "@/assets/mining-equipment.jpg";
+import africanMiningEquipment from "@/assets/african-mining-equipment.jpg";
 
 const ServiceEquipment = () => {
   const benefits = [
@@ -63,7 +63,7 @@ const ServiceEquipment = () => {
       <section className="relative py-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${miningEquipment})` }}
+          style={{ backgroundImage: `url(${africanMiningEquipment})` }}
         />
         <div className="absolute inset-0 bg-secondary/80" />
         

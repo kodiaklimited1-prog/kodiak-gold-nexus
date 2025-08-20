@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import africanMiningHero from "@/assets/african-mining-hero.jpg";
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,7 +14,7 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/50 to-background"></div>
         <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `url('/assets/hero-mining.jpg')`,
+          backgroundImage: `url(${africanMiningHero})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
