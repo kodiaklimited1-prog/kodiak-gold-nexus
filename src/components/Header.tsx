@@ -32,14 +32,14 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-center space-x-16 flex-1">
+            <nav className="hidden lg:flex items-center justify-center space-x-8 flex-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-base font-medium transition-colors duration-200 px-4 py-2 ${
+                  className={`text-sm font-normal transition-colors duration-200 px-3 py-1 ${
                     isActive(item.href)
-                      ? "text-primary border-b-2 border-primary pb-2"
+                      ? "text-primary border-b-2 border-primary pb-1"
                       : "text-foreground hover:text-primary"
                   }`}
                 >
