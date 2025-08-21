@@ -193,7 +193,7 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     title: "Office Address",
-                    content: "Nairobi, Kenya",
+                    content: "northrift town",
                     link: "https://maps.google.com"
                   }
                 ].map((contact, index) => (

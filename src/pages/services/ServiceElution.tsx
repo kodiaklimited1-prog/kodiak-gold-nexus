@@ -36,7 +36,7 @@ const ServiceElution = () => {
       <section className="relative py-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${africanElutionProcess})` }}
+          style={{ backgroundImage: `url(/lovable-uploads/498c9c68-3088-4a3f-9edd-c43e068bbb5d.png)` }}
         />
         <div className="absolute inset-0 bg-secondary/80" />
         
