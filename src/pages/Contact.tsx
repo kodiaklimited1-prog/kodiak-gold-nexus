@@ -21,10 +21,22 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the form data to your backend
+    // Create email content
+    const emailSubject = encodeURIComponent("Mining Consultation Inquiry");
+    const emailBody = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}\n\n` +
+      `---\nSent from Kodiak Solutions Contact Form`
+    );
+    
+    // Open user's email client
+    window.open(`mailto:info@kodiaksolutions.co.ke?subject=${emailSubject}&body=${emailBody}`);
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      title: "Message Prepared!",
+      description: "Your email client has been opened. Please send the message to complete your inquiry.",
     });
 
     // Reset form
@@ -193,8 +205,8 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     title: "Office Address",
-                    content: "northrift town",
-                    link: "https://maps.google.com"
+                    content: "Westlands, Soin Arcade, Nairobi",
+                    link: "https://maps.google.com/maps?q=Soin+Arcade+Westlands+Nairobi"
                   }
                 ].map((contact, index) => (
                   <Card key={index} className="card-gold hover-scale animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.1}s`}}>
@@ -269,14 +281,14 @@ const Contact = () => {
 
           <div className="rounded-xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-74.0123456!3d40.7123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ0LjQiTiA3NMKwMDAnNDQuNCJX!5e0!3m2!1sen!2sus!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8205377110823!2d36.80964037496074!3d-1.2858159887010243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6b7ff3b01f%3A0x9a9b6b7ff3b01f!2sSoin%20Arcade%2C%20Westlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1702912345678!5m2!1sen!2ske"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Kodiak Solutions Office Location"
+              title="Kodiak Solutions Office Location - Soin Arcade, Westlands, Nairobi"
             ></iframe>
           </div>
         </div>
