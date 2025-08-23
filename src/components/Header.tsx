@@ -32,18 +32,21 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-center space-x-8 flex-1">
+            <nav className="hidden lg:flex items-center justify-center space-x-10 flex-1">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-normal transition-colors duration-200 px-3 py-1 ${
+                  className={`text-base font-bold tracking-wide transition-all duration-300 px-4 py-2 rounded-md relative ${
                     isActive(item.href)
-                      ? "text-primary border-b-2 border-primary pb-1"
-                      : "text-foreground hover:text-primary"
+                      ? "text-primary bg-primary/10 shadow-sm scale-105"
+                      : "text-foreground hover:text-primary hover:bg-primary/5 hover:scale-105"
                   }`}
                 >
                   {item.name}
+                  {isActive(item.href) && (
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary rounded-full -mb-1"></div>
+                  )}
                 </Link>
               ))}
             </nav>
@@ -89,15 +92,15 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden bg-background border-t border-border">
             <div className="container mx-auto px-4 py-4">
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-3">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`text-sm font-medium py-2 ${
+                    className={`text-base font-bold tracking-wide py-3 px-4 rounded-lg transition-all duration-300 ${
                       isActive(item.href)
-                        ? "text-primary"
-                        : "text-foreground hover:text-primary"
+                        ? "text-primary bg-primary/10 shadow-sm border-l-4 border-primary"
+                        : "text-foreground hover:text-primary hover:bg-primary/5 hover:translate-x-2"
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
