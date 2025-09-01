@@ -11,6 +11,8 @@ import africanMiningEquipment from "@/assets/african-mining-equipment.jpg";
 import africanLabProcessing from "@/assets/african-lab-processing.jpg";
 import africanTeamConsulting from "@/assets/african-team-consulting.jpg";
 import africanProcessingPlant from "@/assets/african-processing-plant.jpg";
+import africanElutionProcess from "@/assets/african-elution-process.jpg";
+import miningAction1 from "@/assets/mining-action-1.jpg";
 
 const Index = () => {
   const stats = [
@@ -82,7 +84,7 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0 opacity-10"
-          style={{ backgroundImage: `url(${africanMiningEquipment})` }}
+          style={{ backgroundImage: `url(${miningAction1})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95"></div>
         
@@ -149,7 +151,7 @@ const Index = () => {
                 description: "Advanced elution processes for maximum gold recovery efficiency using cutting-edge technology.",
                 href: "/services/elution",
                 icon: Zap,
-                bgImage: africanLabProcessing
+                bgImage: africanElutionProcess
               },
               {
                 title: "Mining Chemicals",
@@ -214,7 +216,7 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0"
-          style={{ backgroundImage: `url(${africanTeamConsulting})` }}
+          style={{ backgroundImage: `url(${africanMiningEquipment})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95"></div>
         
