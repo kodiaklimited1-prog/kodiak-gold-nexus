@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, MessageSquare, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -191,7 +191,7 @@ const Contact = () => {
                     link: "tel:+254710337605"
                   },
                   {
-                    icon: MessageSquare,
+                    icon: MessageCircle,
                     title: "WhatsApp",
                     content: "+254 712 614 215",
                     link: "https://wa.me/254712614215"

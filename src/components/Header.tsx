@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, MessageSquare } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -64,7 +64,7 @@ const Header = () => {
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2"
                 >
-                  <MessageSquare className="h-4 w-4" />
+                  <MessageCircle className="h-4 w-4" />
                   <span>WhatsApp</span>
                 </a>
               </Button>
@@ -119,7 +119,7 @@ const Header = () => {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center space-x-2"
                     >
-                      <MessageSquare className="h-4 w-4" />
+                      <MessageCircle className="h-4 w-4" />
                       <span>WhatsApp</span>
                     </a>
                   </Button>
@@ -141,7 +141,7 @@ const Header = () => {
         className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Contact us on WhatsApp"
       >
-        <MessageSquare className="h-6 w-6" />
+        <MessageCircle className="h-6 w-6" />
       </a>
     </>
   );

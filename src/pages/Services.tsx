@@ -207,8 +207,8 @@ const Services = () => {
                 description: "Five years of specialized experience in gold mining operations and consultancy."
               },
               {
-                title: "200+ Successful Projects",
-                description: "Proven track record with more than 200 completed projects across 12 countries worldwide."
+                title: "100+ Successful Projects",
+                description: "Proven track record with more than 100 completed projects across 12 countries worldwide."
               },
               {
                 title: "24/7 Support",

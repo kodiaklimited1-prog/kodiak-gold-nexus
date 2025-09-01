@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Linkedin, Twitter, MessageSquare, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Linkedin, Twitter, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,7 +49,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-green-500 transition-colors duration-200"
               >
-                <MessageSquare className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5" />
               </a>
             </div>
           </div>

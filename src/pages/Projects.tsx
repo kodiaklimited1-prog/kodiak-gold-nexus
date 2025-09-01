@@ -193,7 +193,7 @@ const Projects = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: "200+", label: "Projects Completed" },
+              { value: "100+", label: "Projects Completed" },
               { value: "50+", label: "Satisfied Clients" },
               { value: "12", label: "Countries Served" },
               { value: "99%", label: "Success Rate" }

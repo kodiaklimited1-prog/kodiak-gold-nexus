@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Award, Globe, TrendingUp, Zap, Shield, Target, Star, MessageSquare } from "lucide-react";
+import { ArrowRight, Users, Award, Globe, TrendingUp, Zap, Shield, Target, Star, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
@@ -17,7 +17,7 @@ import miningAction1 from "@/assets/mining-action-1.jpg";
 const Index = () => {
   const stats = [
     { icon: TrendingUp, label: "Years in Service", value: "5+" },
-    { icon: Award, label: "Projects Completed", value: "200+" },
+    { icon: Award, label: "Projects Completed", value: "100+" },
     { icon: Users, label: "Clients Served", value: "50+" },
     { icon: Globe, label: "Countries Reached", value: "12+" },
   ];
@@ -165,7 +165,7 @@ const Index = () => {
                 description: "State-of-the-art equipment for professional mining operations with full support services.",
                 href: "/services/equipment",
                 icon: Star,
-                bgImage: africanMiningEquipment
+                bgImage: africanProcessingPlant
               }
             ].map((service, index) => (
               <div key={index}>
@@ -216,7 +216,7 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div 
           className="absolute inset-0"
-          style={{ backgroundImage: `url(${africanMiningEquipment})` }}
+          style={{ backgroundImage: `url(${africanTeamConsulting})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95"></div>
         
@@ -248,7 +248,7 @@ const Index = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
               >
-                <MessageSquare className="h-5 w-5" />
+                <MessageCircle className="h-5 w-5" />
                 <span>Chat on WhatsApp</span>
               </a>
             </Button>
@@ -263,7 +263,7 @@ const Index = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">200+ Successful Projects</span>
+                <span className="text-sm font-medium">100+ Successful Projects</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Globe className="h-5 w-5 text-primary" />
