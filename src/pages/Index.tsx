@@ -144,21 +144,21 @@ const Index = () => {
                 description: "Expert guidance and strategic planning for your mining operations with proven methodologies.",
                 href: "/services/consultancy",
                 icon: Target,
-                bgImage: africanTeamConsulting
+                bgImage: "/lovable-uploads/6d7088ef-64a4-47d8-95cb-2795e81bd92f.png"
               },
               {
                 title: "Gold Elution",
                 description: "Advanced elution processes for maximum gold recovery efficiency using cutting-edge technology.",
                 href: "/services/elution",
                 icon: Zap,
-                bgImage: africanElutionProcess
+                bgImage: "/lovable-uploads/7f83ab00-b67e-4ce7-879a-5320a4e078d9.png"
               },
               {
                 title: "Mining Chemicals",
                 description: "High-quality chemicals optimized for gold mining operations with environmental compliance.",
                 href: "/services/chemicals",
                 icon: Shield,
-                bgImage: africanLabProcessing
+                bgImage: "/lovable-uploads/18c0a8dc-b354-4be0-8803-dc979cd8b7a6.png"
               },
               {
                 title: "Mining Equipment",
