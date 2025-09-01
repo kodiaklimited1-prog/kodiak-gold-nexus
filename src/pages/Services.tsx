@@ -20,7 +20,7 @@ const Services = () => {
         "Risk Assessment & Management",
         "Regulatory Compliance Support"
       ],
-      image: africanTeamConsulting,
+      image: "/lovable-uploads/6d7088ef-64a4-47d8-95cb-2795e81bd92f.png",
       href: "/services/consultancy"
     },
     {
@@ -33,7 +33,7 @@ const Services = () => {
         "Recovery Rate Enhancement",
         "Quality Control Systems"
       ],
-      image: africanElutionProcess,
+      image: "/lovable-uploads/7f83ab00-b67e-4ce7-879a-5320a4e078d9.png",
       href: "/services/elution"
     },
     {
@@ -46,7 +46,7 @@ const Services = () => {
         "Custom Chemical Solutions",
         "Safe Handling Protocols"
       ],
-      image: africanMiningEquipment,
+      image: "/lovable-uploads/18c0a8dc-b354-4be0-8803-dc979cd8b7a6.png",
       href: "/services/chemicals"
     },
     {
