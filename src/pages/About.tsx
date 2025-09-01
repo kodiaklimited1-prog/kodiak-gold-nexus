@@ -33,7 +33,7 @@ const About = () => {
     <Layout>
       <SEO 
         title="About Us - Leading Gold Mining Consultancy"
-        description="Learn about Kodiak Solutions Limited, a trusted gold mining consultancy with 15+ years of experience. Our mission, vision, values, and expert team."
+        description="Learn about Kodiak Solutions Limited, a trusted gold mining consultancy with 5+ years of experience. Our mission, vision, values, and expert team."
         keywords="about kodiak solutions, mining consultancy company, gold mining experts, mining professionals, mining team"
       />
 
@@ -52,7 +52,7 @@ const About = () => {
               About <span className="gold-text animate-gold-glow">Kodiak Solutions</span>
             </h1>
             <p className="text-xl opacity-90 leading-relaxed animate-slide-up" style={{animationDelay: '0.3s'}}>
-              With over 15 years of experience in the gold mining industry, we have established ourselves 
+              With over 5 years of experience in the gold mining industry, we have established ourselves 
               as a trusted partner for mining operations worldwide, delivering exceptional consultancy 
               and technical solutions.
             </p>
@@ -196,17 +196,17 @@ const About = () => {
               {
                 name: "Dr. James Mitchell",
                 position: "Chief Executive Officer",
-                experience: "25+ years in mining operations and strategy"
+                experience: "10+ years in mining operations and strategy"
               },
               {
                 name: "Sarah Thompson",
                 position: "Head of Consultancy",
-                experience: "20+ years in gold extraction and processing"
+                experience: "8+ years in gold extraction and processing"
               },
               {
                 name: "Michael Rodriguez",
                 position: "Technical Director",
-                experience: "18+ years in mining equipment and technology"
+                experience: "7+ years in mining equipment and technology"
               }
             ].map((member, index) => (
               <Card key={index} className="card-gold text-center">
@@ -239,7 +239,7 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-hero" asChild>
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/254712614215" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

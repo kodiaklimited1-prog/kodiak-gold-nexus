@@ -44,7 +44,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="https://wa.me/0710337605"
+                href="https://wa.me/254712614215"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-green-500 transition-colors duration-200"
@@ -100,7 +100,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm text-gray-300">+254 710 337 605</span>
+                <span className="text-sm text-gray-300">+254 712 614 215</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
@@ -109,8 +109,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-primary mt-1" />
                 <span className="text-sm text-gray-300">
-                  123 Mining District<br />
-                  Gold Valley, GV 12345
+                  KIE Eldoret<br />
+                  Eldoret, Kenya
                 </span>
               </div>
             </div>

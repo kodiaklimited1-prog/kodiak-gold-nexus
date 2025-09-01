@@ -16,7 +16,7 @@ import miningAction1 from "@/assets/mining-action-1.jpg";
 
 const Index = () => {
   const stats = [
-    { icon: TrendingUp, label: "Years in Service", value: "15+" },
+    { icon: TrendingUp, label: "Years in Service", value: "5+" },
     { icon: Award, label: "Projects Completed", value: "200+" },
     { icon: Users, label: "Clients Served", value: "50+" },
     { icon: Globe, label: "Countries Reached", value: "12+" },
@@ -26,7 +26,7 @@ const Index = () => {
     <Layout>
       <SEO 
         title="Your Trusted Partner in Gold Mining Excellence"
-        description="Kodiak Solutions Limited delivers world-class gold mining consultancy, elution, chemicals, and equipment solutions. 15+ years of excellence in the mining industry."
+        description="Kodiak Solutions Limited delivers world-class gold mining consultancy, elution, chemicals, and equipment solutions. 5+ years of excellence in the mining industry."
         keywords="gold mining consultancy, mining solutions, elution services, mining equipment, mining chemicals, professional mining services"
       />
 
@@ -49,7 +49,7 @@ const Index = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
             Delivering world-class consultancy, elution, chemicals, and equipment solutions 
-            with over 15 years of industry expertise.
+            with over 5 years of industry expertise.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -243,7 +243,7 @@ const Index = () => {
               asChild
             >
               <a 
-                href="https://wa.me/0710337605" 
+                href="https://wa.me/254712614215" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2"
@@ -259,7 +259,7 @@ const Index = () => {
             <div className="flex flex-wrap justify-center items-center gap-8 text-secondary-foreground/70">
               <div className="flex items-center space-x-2">
                 <Award className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">15+ Years Experience</span>
+                <span className="text-sm font-medium">5+ Years Experience</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="h-5 w-5 text-primary" />

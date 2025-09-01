@@ -187,14 +187,14 @@ const Contact = () => {
                   {
                     icon: Phone,
                     title: "Phone Number",
-                    content: "+254 710 337 605",
+                    content: "+254 712 614 215",
                     link: "tel:+254710337605"
                   },
                   {
                     icon: MessageSquare,
                     title: "WhatsApp",
-                    content: "+254 710 337 605",
-                    link: "https://wa.me/0710337605"
+                    content: "+254 712 614 215",
+                    link: "https://wa.me/254712614215"
                   },
                   {
                     icon: Mail,
@@ -205,8 +205,8 @@ const Contact = () => {
                   {
                     icon: MapPin,
                     title: "Office Address",
-                    content: "Westlands, Soin Arcade, Nairobi",
-                    link: "https://maps.google.com/maps?q=Soin+Arcade+Westlands+Nairobi"
+                    content: "KIE Eldoret, Kenya",
+                    link: "https://maps.google.com/maps?q=KIE+Eldoret+Kenya"
                   }
                 ].map((contact, index) => (
                   <Card key={index} className="card-gold hover-scale animate-slide-up gold-hover-effect" style={{animationDelay: `${index * 0.1}s`}}>
@@ -307,7 +307,7 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-hero" asChild>
               <a 
-                href="https://wa.me/0710337605" 
+                href="https://wa.me/254712614215" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -319,7 +319,7 @@ const Contact = () => {
               className="btn-outline-gold bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary"
               asChild
             >
-              <a href="tel:+254710337605">
+              <a href="tel:+254712614215">
                 Call Us Direct
               </a>
             </Button>

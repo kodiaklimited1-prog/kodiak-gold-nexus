@@ -203,8 +203,8 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "15+ Years Experience",
-                description: "Over a decade and a half of specialized experience in gold mining operations and consultancy."
+                title: "5+ Years Experience",
+                description: "Five years of specialized experience in gold mining operations and consultancy."
               },
               {
                 title: "200+ Successful Projects",
@@ -243,7 +243,7 @@ const Services = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-hero" asChild>
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/254712614215" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >

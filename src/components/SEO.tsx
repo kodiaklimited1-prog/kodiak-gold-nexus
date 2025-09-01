@@ -75,14 +75,14 @@ const SEO = ({
       "logo": "/lovable-uploads/bd41d491-0ef4-4bf7-91f9-7e5ff7eab679.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
+        "telephone": "+254 712 614 215",
         "contactType": "customer service"
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Mining District",
-        "addressLocality": "Gold Valley",
-        "addressRegion": "GV",
+        "streetAddress": "KIE Eldoret",
+        "addressLocality": "Eldoret",
+        "addressRegion": "Uasin Gishu",
         "postalCode": "12345"
       },
       "sameAs": [
