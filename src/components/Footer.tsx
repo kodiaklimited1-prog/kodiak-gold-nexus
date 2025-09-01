@@ -20,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/kodiak-solutions-limited"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-primary transition-colors duration-200"
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/kodiaksolutionslimited"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-primary transition-colors duration-200"
@@ -36,7 +36,7 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/kodiaksolutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-primary transition-colors duration-200"
@@ -82,13 +82,18 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-primary">Our Services</h3>
             <ul className="space-y-2">
               {[
-                "Gold Mining Consultancy",
-                "Gold Elution",
-                "Mining Chemicals",
-                "Mining Equipment",
+                { name: "Gold Mining Consultancy", href: "/services/consultancy" },
+                { name: "Gold Elution", href: "/services/elution" },
+                { name: "Mining Chemicals", href: "/services/chemicals" },
+                { name: "Mining Equipment", href: "/services/equipment" },
               ].map((service) => (
-                <li key={service}>
-                  <span className="text-sm text-gray-300">{service}</span>
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-sm text-gray-300 hover:text-primary transition-colors duration-200"
+                  >
+                    {service.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -124,12 +129,12 @@ const Footer = () => {
               © {currentYear} Kodiak Solutions Limited - All Rights Reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-sm text-gray-400 hover:text-primary transition-colors duration-200">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-primary transition-colors duration-200">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-sm text-gray-400 hover:text-primary transition-colors duration-200">
+              </Link>
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-primary transition-colors duration-200">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
