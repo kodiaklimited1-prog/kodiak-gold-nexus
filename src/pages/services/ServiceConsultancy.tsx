@@ -36,7 +36,7 @@ const ServiceConsultancy = () => {
       <section className="relative py-32 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${africanTeamConsulting})` }}
+          style={{ backgroundImage: `url(/lovable-uploads/6d7088ef-64a4-47d8-95cb-2795e81bd92f.png)` }}
         />
         <div className="absolute inset-0 bg-secondary/80" />
         
@@ -143,6 +143,70 @@ const ServiceConsultancy = () => {
                 <p className="text-muted-foreground leading-relaxed">{benefit}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Real Mining Operations */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-secondary mb-4 font-serif">
+              Real Mining Projects We Consult On
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Our consultancy services cover all aspects of gold mining operations, 
+              from heap leaching to CIL/CIP processing facilities.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div 
+                  className="aspect-video rounded-lg overflow-hidden shadow-xl bg-cover bg-center hover-scale"
+                  style={{ backgroundImage: `url(/lovable-uploads/6d7088ef-64a4-47d8-95cb-2795e81bd92f.png)` }}
+                >
+                  <div className="w-full h-full bg-gradient-to-t from-secondary/60 to-transparent flex items-end">
+                    <div className="p-6 text-white">
+                      <h3 className="text-xl font-bold mb-2 font-serif">Heap Leaching Operations</h3>
+                      <p className="text-sm opacity-90">
+                        Professional consultancy for large-scale leach pad operations
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <h3 className="text-3xl font-bold text-secondary font-serif">
+                  Operational Excellence Consulting
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We provide expert consultancy for heap leaching operations, CIL/CIP processing, 
+                  and all aspects of gold mining. Our team has hands-on experience with large-scale 
+                  mining operations and can help optimize your processes for maximum efficiency.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground">Heap leach pad design and optimization</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground">CIL/CIP circuit analysis and improvement</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground">Process control and monitoring systems</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                    <span className="text-muted-foreground">Environmental compliance and best practices</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
