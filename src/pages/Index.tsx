@@ -42,18 +42,18 @@ const Index = () => {
         <div className="absolute inset-0 hero-overlay" />
 
         {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif">
+        <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif animate-scale-in">
             Your Trusted Partner in{" "}
             <span className="gold-text">Gold Mining Excellence</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in">
             Delivering world-class consultancy, elution, chemicals, and equipment solutions 
             with over 5 years of industry expertise.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="btn-hero text-lg px-8 py-4" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+            <Button className="btn-hero text-lg px-8 py-4 hover-scale" asChild>
               <Link to="/services" className="flex items-center space-x-2">
                 <span>Explore Services</span>
                 <ArrowRight className="h-5 w-5" />
@@ -61,7 +61,7 @@ const Index = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="btn-outline-gold text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary"
+              className="btn-outline-gold text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary hover-scale"
               asChild
             >
               <Link to="/contact">
@@ -72,9 +72,9 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center cursor-pointer">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-fade-in">
+          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center cursor-pointer hover-scale">
+            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
           <p className="text-sm mt-2 opacity-75">Scroll to explore</p>
         </div>
@@ -89,7 +89,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95"></div>
         
         {/* Section Title */}
-        <div className="container mx-auto px-4 relative z-10 mb-12">
+        <div className="container mx-auto px-4 relative z-10 mb-12 animate-fade-in">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 font-serif gold-text">
               Proven Excellence
@@ -105,7 +105,8 @@ const Index = () => {
             {stats.map((stat, index) => (
               <Card 
                 key={index} 
-                className="card-gold text-center border-none hover:shadow-lg transition-shadow duration-300"
+                className="card-gold text-center border-none hover:shadow-lg transition-all duration-500 hover-scale animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-8 relative">
                   <stat.icon className="h-16 w-16 text-primary mx-auto mb-6" />
@@ -127,7 +128,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-20">
+          <div className="text-center mb-20 animate-fade-in">
             <h2 className="text-4xl md:text-6xl font-bold text-secondary mb-6 font-serif gold-text">
               Our Core Services
             </h2>
@@ -168,17 +169,17 @@ const Index = () => {
                 bgImage: africanProcessingPlant
               }
             ].map((service, index) => (
-              <div key={index}>
+              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
                 <Link to={service.href} className="block group">
-                  <Card className="card-corporate cursor-pointer relative overflow-hidden h-96 hover:shadow-xl transition-shadow duration-300 border-2 border-transparent hover:border-primary/20">
+                  <Card className="card-corporate cursor-pointer relative overflow-hidden h-96 hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/20 hover-scale">
                     <div 
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                       style={{ backgroundImage: `url(${service.bgImage})` }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
                     
                     <CardContent className="p-8 text-center relative z-10 h-full flex flex-col justify-between">
-                      <div className="w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/40 transition-colors duration-300">
+                      <div className="w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/40 transition-all duration-300 group-hover:scale-110">
                         <service.icon className="w-10 h-10 text-primary" />
                       </div>
                       
@@ -191,7 +192,7 @@ const Index = () => {
                         </p>
                         <div className="flex items-center justify-center text-primary group-hover:text-primary-light transition-colors duration-300">
                           <span className="text-base font-semibold">Explore Service</span>
-                          <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
                         </div>
                       </div>
                     </CardContent>
@@ -201,8 +202,8 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-16">
-            <Button className="btn-hero text-lg px-10 py-5" asChild>
+          <div className="text-center mt-16 animate-fade-in">
+            <Button className="btn-hero text-lg px-10 py-5 hover-scale" asChild>
               <Link to="/services" className="flex items-center space-x-2">
                 <span>View All Services</span>
                 <ArrowRight className="h-5 w-5" />
@@ -220,7 +221,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/90 to-secondary/95"></div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 text-center relative z-10 animate-fade-in">
           <h2 className="text-4xl md:text-6xl font-bold mb-8 font-serif text-secondary-foreground gold-text">
             Ready to Elevate Your Mining Operations?
           </h2>
@@ -231,7 +232,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button className="btn-hero text-lg px-10 py-5" asChild>
+            <Button className="btn-hero text-lg px-10 py-5 hover-scale" asChild>
               <Link to="/contact" className="flex items-center space-x-2">
                 <span>Get Started Today</span>
                 <ArrowRight className="h-5 w-5" />
@@ -239,7 +240,7 @@ const Index = () => {
             </Button>
             <Button 
               variant="outline" 
-              className="btn-outline-gold text-lg px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-secondary"
+              className="btn-outline-gold text-lg px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-secondary hover-scale"
               asChild
             >
               <a 
@@ -255,17 +256,17 @@ const Index = () => {
           </div>
           
           {/* Trust indicators */}
-          <div className="mt-16">
+          <div className="mt-16 animate-fade-in">
             <div className="flex flex-wrap justify-center items-center gap-8 text-secondary-foreground/70">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover-scale">
                 <Award className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">5+ Years Experience</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover-scale">
                 <Users className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">100+ Successful Projects</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 hover-scale">
                 <Globe className="h-5 w-5 text-primary" />
                 <span className="text-sm font-medium">12+ Countries Served</span>
               </div>
