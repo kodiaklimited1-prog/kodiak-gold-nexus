@@ -76,7 +76,7 @@ const About = () => {
                 </p>
                 <p>
                   Starting as a small consultancy firm, we have grown into a comprehensive solutions 
-                  provider, serving clients across 12 countries and completing over 200 successful 
+                  provider, serving clients across 12 countries and completing over 100 successful 
                   projects. Our commitment to excellence and innovation has made us a preferred 
                   partner for mining operations of all scales.
                 </p>
@@ -89,8 +89,8 @@ const About = () => {
             </div>
             <div className="relative animate-slide-right">
               <img 
-                src={consultancyTeam} 
-                alt="Kodiak Solutions Team" 
+                src="/lovable-uploads/5197321b-ba8d-4d41-92db-cc5fefe13f44.png" 
+                alt="Kodiak Solutions Team Consultation" 
                 className="rounded-xl shadow-lg hover-scale gold-hover-effect"
               />
               <div className="absolute inset-0 bg-primary/10 rounded-xl"></div>
