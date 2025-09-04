@@ -38,34 +38,10 @@ const Index = () => {
           style={{ backgroundImage: `url(${africanMiningHero})` }}
         />
         
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 opacity-20 animate-[morph-float_15s_ease-in-out_infinite]">
-          <img src={floatingElement1} alt="" className="w-32 h-32 rotate-45" />
-        </div>
-        <div className="absolute bottom-20 right-10 opacity-15 animate-[morph-float_18s_ease-in-out_infinite_reverse]">
-          <img src={floatingElement2} alt="" className="w-40 h-40" />
-        </div>
-        <div className="absolute top-1/3 right-1/4 opacity-10 animate-[morph-float_12s_ease-in-out_infinite_alternate]">
-          <div className="w-20 h-20 bg-primary/30 rounded-full blur-xl"></div>
-        </div>
         
         {/* Dynamic Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-transparent to-primary/60 animate-pulse"></div>
         
-        {/* Animated Particles */}
-        <div className="absolute inset-0 overflow-hidden">
-          {[...Array(6)].map((_, i) => (
-            <div 
-              key={i}
-              className={`absolute w-2 h-2 bg-primary/20 rounded-full animate-[float_${8 + i * 2}s_ease-in-out_infinite]`}
-              style={{
-                left: `${10 + i * 15}%`,
-                top: `${20 + i * 10}%`,
-                animationDelay: `${i * 1.2}s`
-              }}
-            />
-          ))}
-        </div>
 
         {/* Content with Enhanced Animations */}
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -110,13 +86,6 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95"></div>
         
-        {/* Floating Background Elements */}
-        <div className="absolute top-10 right-20 opacity-5 animate-[morph-float_20s_ease-in-out_infinite]">
-          <div className="w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-        </div>
-        <div className="absolute bottom-10 left-20 opacity-5 animate-[morph-float_22s_ease-in-out_infinite_reverse]">
-          <div className="w-48 h-48 bg-accent/20 rounded-full blur-2xl"></div>
-        </div>
         
         {/* Section Title */}
         <div className="container mx-auto px-4 relative z-10 mb-12 animate-fade-in">
@@ -211,9 +180,6 @@ const Index = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent group-hover:from-secondary/95 transition-all duration-500"></div>
                     
-                    {/* Floating Elements */}
-                    <div className="absolute top-4 right-4 w-8 h-8 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div>
-                    <div className="absolute bottom-4 left-4 w-6 h-6 bg-accent/30 rounded-full opacity-0 group-hover:opacity-100 animate-bounce transition-opacity duration-700" style={{ animationDelay: '0.2s' }}></div>
                     
                     <CardContent className="p-8 text-center relative z-10 h-full flex flex-col justify-between">
                       <div className="w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/50 transition-all duration-500 group-hover:scale-125 group-hover:rotate-3 relative overflow-hidden">
