@@ -20,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/company/kodiak-solutions-limited"
+                href="https://www.linkedin.com/company/example-company"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-primary transition-colors duration-200"
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://www.facebook.com/kodiaksolutionslimited"
+                href="https://www.facebook.com/example.company"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-primary transition-colors duration-200"
@@ -36,7 +36,7 @@ const Footer = () => {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com/kodiaksolutions"
+                href="https://twitter.com/example_company"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-primary transition-colors duration-200"
@@ -44,7 +44,7 @@ const Footer = () => {
                 <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="https://wa.me/254712614215"
+                href="https://wa.me/1234567890"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-white/10 rounded-lg hover:bg-green-500 transition-colors duration-200"
