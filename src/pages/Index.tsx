@@ -32,69 +32,100 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with Parallax Effect */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-[parallax-float_20s_ease-in-out_infinite] transform scale-105"
           style={{ backgroundImage: `url(${africanMiningHero})` }}
         />
         
-        {/* Overlay */}
-        <div className="absolute inset-0 hero-overlay" />
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 opacity-20 animate-[morph-float_15s_ease-in-out_infinite]">
+          <img src={floatingElement1} alt="" className="w-32 h-32 rotate-45" />
+        </div>
+        <div className="absolute bottom-20 right-10 opacity-15 animate-[morph-float_18s_ease-in-out_infinite_reverse]">
+          <img src={floatingElement2} alt="" className="w-40 h-40" />
+        </div>
+        <div className="absolute top-1/3 right-1/4 opacity-10 animate-[morph-float_12s_ease-in-out_infinite_alternate]">
+          <div className="w-20 h-20 bg-primary/30 rounded-full blur-xl"></div>
+        </div>
+        
+        {/* Dynamic Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 via-transparent to-primary/60 animate-pulse"></div>
+        
+        {/* Animated Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(6)].map((_, i) => (
+            <div 
+              key={i}
+              className={`absolute w-2 h-2 bg-primary/20 rounded-full animate-[float_${8 + i * 2}s_ease-in-out_infinite]`}
+              style={{
+                left: `${10 + i * 15}%`,
+                top: `${20 + i * 10}%`,
+                animationDelay: `${i * 1.2}s`
+              }}
+            />
+          ))}
+        </div>
 
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center text-white animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif animate-scale-in">
+        {/* Content with Enhanced Animations */}
+        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif animate-[slide-up_1.2s_ease-out] hover:animate-pulse transition-all duration-300">
             Your Trusted Partner in{" "}
-            <span className="gold-text">Gold Mining Excellence</span>
+            <span className="gold-text relative animate-[glow_3s_ease-in-out_infinite]">
+              Gold Mining Excellence
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 blur-xl animate-pulse"></div>
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-[slide-up_1.5s_ease-out] hover:opacity-100 transition-opacity duration-300">
             Delivering world-class consultancy, elution, chemicals, and equipment solutions 
             with over 5 years of industry expertise.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-            <Button className="btn-hero text-lg px-8 py-4 hover-scale" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-[slide-up_1.8s_ease-out]">
+            <Button className="btn-hero text-lg px-8 py-4 hover-scale group relative overflow-hidden" asChild>
               <Link to="/services" className="flex items-center space-x-2">
-                <span>Explore Services</span>
-                <ArrowRight className="h-5 w-5" />
+                <span className="relative z-10">Explore Services</span>
+                <ArrowRight className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary-light to-accent translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
               </Link>
             </Button>
             <Button 
               variant="outline" 
-              className="btn-outline-gold text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary hover-scale"
+              className="btn-outline-gold text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-secondary hover-scale group relative overflow-hidden"
               asChild
             >
-              <Link to="/contact">
+              <Link to="/contact" className="relative z-10 group-hover:scale-105 transition-transform duration-300">
                 Get Quote
               </Link>
             </Button>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-fade-in">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center cursor-pointer hover-scale">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
-          </div>
-          <p className="text-sm mt-2 opacity-75">Scroll to explore</p>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="py-20 relative overflow-hidden">
         <div 
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-10 animate-[parallax-float_25s_ease-in-out_infinite]"
           style={{ backgroundImage: `url(${miningAction1})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-accent to-background/95"></div>
         
+        {/* Floating Background Elements */}
+        <div className="absolute top-10 right-20 opacity-5 animate-[morph-float_20s_ease-in-out_infinite]">
+          <div className="w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+        </div>
+        <div className="absolute bottom-10 left-20 opacity-5 animate-[morph-float_22s_ease-in-out_infinite_reverse]">
+          <div className="w-48 h-48 bg-accent/20 rounded-full blur-2xl"></div>
+        </div>
+        
         {/* Section Title */}
         <div className="container mx-auto px-4 relative z-10 mb-12 animate-fade-in">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 font-serif gold-text">
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 font-serif gold-text hover:animate-pulse transition-all duration-300 relative">
               Proven Excellence
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-accent/10 blur-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-[slide-up_1s_ease-out]">
               Numbers that speak to our commitment and expertise
             </p>
           </div>
@@ -105,14 +136,16 @@ const Index = () => {
             {stats.map((stat, index) => (
               <Card 
                 key={index} 
-                className="card-gold text-center border-none hover:shadow-lg transition-all duration-500 hover-scale animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="card-gold text-center border-none hover:shadow-2xl transition-all duration-700 hover-scale animate-fade-in group relative overflow-hidden"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <CardContent className="p-8 relative">
-                  <stat.icon className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <div className="text-4xl md:text-5xl font-bold text-secondary mb-2 gold-text">{stat.value}</div>
-                  <div className="text-muted-foreground font-medium text-lg">{stat.label}</div>
+                <CardContent className="p-8 relative z-10">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <stat.icon className="h-16 w-16 text-primary mx-auto mb-6 group-hover:animate-bounce group-hover:scale-110 transition-all duration-500" />
+                  <div className="text-4xl md:text-5xl font-bold text-secondary mb-2 gold-text group-hover:animate-pulse">{stat.value}</div>
+                  <div className="text-muted-foreground font-medium text-lg group-hover:text-primary transition-colors duration-300">{stat.label}</div>
                 </CardContent>
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/30 rounded-lg transition-all duration-500"></div>
               </Card>
             ))}
           </div>
@@ -169,30 +202,36 @@ const Index = () => {
                 bgImage: africanProcessingPlant
               }
             ].map((service, index) => (
-              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 <Link to={service.href} className="block group">
-                  <Card className="card-corporate cursor-pointer relative overflow-hidden h-96 hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-primary/20 hover-scale">
+                  <Card className="card-corporate cursor-pointer relative overflow-hidden h-96 hover:shadow-2xl transition-all duration-700 border-2 border-transparent hover:border-primary/30 hover-scale transform hover:-translate-y-2">
                     <div 
-                      className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-125 group-hover:rotate-1"
                       style={{ backgroundImage: `url(${service.bgImage})` }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent group-hover:from-secondary/95 transition-all duration-500"></div>
+                    
+                    {/* Floating Elements */}
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-primary/20 rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-500"></div>
+                    <div className="absolute bottom-4 left-4 w-6 h-6 bg-accent/30 rounded-full opacity-0 group-hover:opacity-100 animate-bounce transition-opacity duration-700" style={{ animationDelay: '0.2s' }}></div>
                     
                     <CardContent className="p-8 text-center relative z-10 h-full flex flex-col justify-between">
-                      <div className="w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/40 transition-all duration-300 group-hover:scale-110">
-                        <service.icon className="w-10 h-10 text-primary" />
+                      <div className="w-20 h-20 bg-primary/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/50 transition-all duration-500 group-hover:scale-125 group-hover:rotate-3 relative overflow-hidden">
+                        <service.icon className="w-10 h-10 text-primary group-hover:text-white transition-colors duration-300 relative z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                       
-                      <div className="space-y-4">
-                        <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-serif gold-text">
+                      <div className="space-y-4 transform group-hover:translate-y-1 transition-transform duration-300">
+                        <h3 className="text-xl md:text-2xl font-bold text-white mb-4 font-serif gold-text group-hover:animate-pulse">
                           {service.title}
                         </h3>
-                        <p className="text-white/90 mb-6 text-sm md:text-base leading-relaxed">
+                        <p className="text-white/90 mb-6 text-sm md:text-base leading-relaxed group-hover:text-white transition-colors duration-300">
                           {service.description}
                         </p>
-                        <div className="flex items-center justify-center text-primary group-hover:text-primary-light transition-colors duration-300">
+                        <div className="flex items-center justify-center text-primary group-hover:text-primary-light transition-colors duration-300 relative">
                           <span className="text-base font-semibold">Explore Service</span>
-                          <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
+                          <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-3 group-hover:scale-110 transition-all duration-300" />
+                          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-500"></div>
                         </div>
                       </div>
                     </CardContent>
