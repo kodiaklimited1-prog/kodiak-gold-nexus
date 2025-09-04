@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
 import SEO from "@/components/SEO";
-import consultancyTeam from "@/assets/consultancy-team.jpg";
+import africanTeamConsultation from "@/assets/african-team-consultation.jpg";
 
 const About = () => {
   const values = [
@@ -41,7 +41,7 @@ const About = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 to-secondary/90"></div>
         <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url(${consultancyTeam})`,
+          backgroundImage: `url(${africanTeamConsultation})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}></div>
@@ -236,8 +236,8 @@ const About = () => {
             Join the growing list of successful mining operations that trust Kodiak Solutions 
             for their gold mining needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-hero" asChild>
+          <div className="flex justify-center">
+            <Button className="text-base px-6 py-3" asChild>
               <a 
                 href="https://wa.me/254712614215" 
                 target="_blank" 
